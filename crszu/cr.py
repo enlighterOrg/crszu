@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 #-*- coding:utf-8 -*-
 
+#captcha url: https://auth.szu.edu.cn/cas.aspx/
+
 import Image, ImageOps
 from rmnoise import rmnoise
 from edge_detection import find_edges
