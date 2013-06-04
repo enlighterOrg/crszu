@@ -4,16 +4,25 @@
 import Image, ImageOps
 from rmnoise import rmnoise
 from edge_detection import find_edges
+from match import match
+import os
 
-if __name__ == "__main__":
-    im = Image.open("images/captcha/gencheckcode3.png")
+def captcha_regonize(im):
+    captcha = ""
+    im = Image.open(im)
     gray = ImageOps.grayscale(im)
-    biim = gray.point(lambda i : i< 200 and 1 or 255)
+    biim = gray.point(lambda i : i< 230 and 1 or 255)
     img = rmnoise(biim)
     edges = find_edges(img)
-    i = 1
     for e in edges:
         xim = img.crop(e)
-        of = "images/crops/char" + str(i)
-        i += 1
-        xim.save(of+".png","PNG")
+        of = "images/crops/char" + str(edges.index(e)) + ".png"
+        xim.save(of)
+    for n in range(len(os.listdir("images/crops"))):
+        char = match("images/crops/char"+ str(n) + ".png")
+        captcha += str(char)
+    return captcha
+
+if __name__ == "__main__":
+    image = "images/captcha/gencheckcode.png"
+    print captcha_regonize(image)
