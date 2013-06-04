@@ -9,17 +9,16 @@ def rmnoise(im, size=5, min_nbs=2):
     width, height = im.size
     for x in range(width):
         for y in range(height):
-            if data[x,y] > 128:
+            if data[x,y] == 255:
                 continue
             else:
                 nbs = count_neighbors(data, width, height, x, y, size)
                 if nbs < min_nbs:
                     data[x,y] = 255
+    return im
 
 def count_neighbors(data, w, h, x, y, size=3):
-
     nb = 0
-
     if not isinstance(size,int):
         raise SizeTypeError
     if size < 0 or size == size / 2 * 2:
