@@ -4,6 +4,9 @@
 import Image
 
 def find_edges(im):
+    """
+    Perform edge detection then find the edges
+    """
     result = []
     data = im.load()
     histx = [0 for x in range(im.size[0])]
@@ -29,7 +32,7 @@ def find_edges(im):
                 if histy[j] > 0 and histy[j+1] <= 0:
                     tmpy2 = j+1
                     break
-            if i+1 - tmpx != 1:
+            if i+1 - tmpx > 2 and tmpy2 -tmpy1 > 2:
                 result.append((tmpx, tmpy1, i+1, tmpy2))
     return result
 

@@ -5,6 +5,9 @@ import Image
 from errors import InvalidSizeError,SizeTypeError
 
 def rmnoise(im, size=5, min_nbs=2):
+    """
+    Remove noise pixels
+    """
     data = im.load()
     width, height = im.size
     for x in range(width):
@@ -18,6 +21,9 @@ def rmnoise(im, size=5, min_nbs=2):
     return im
 
 def count_neighbors(data, w, h, x, y, size=3):
+    """
+    Count number of black pixel in given neighbors.
+    """
     nb = 0
     if not isinstance(size,int):
         raise SizeTypeError

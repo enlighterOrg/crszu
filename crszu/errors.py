@@ -11,7 +11,7 @@ class InvalidSizeError(ValueError):
         super(InvalidSizeError, self).__init__(message)
 
 class SizeTypeError(TypeError):
-    """
+    """Size Type Error Error.
 
     The exception will be raised wihle filter size is not integer.
     """
