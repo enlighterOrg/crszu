@@ -1,6 +1,8 @@
 # crszu
 
-Capthca Regonization for SZU Authentication
+Capthca Regonization for SZU Authentication (https://auth.szu.edu.cn/cas.aspx).
+
+Recognition rate is above 80%.
 
 ## How to use?
 
@@ -11,5 +13,5 @@ img = "crszu/images/captcha/gencheckcode.png"
 captcha = cr.captcha_regonize(img)
 print captcha
 
-#ggs6
+#8jh9
 ```
