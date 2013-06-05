@@ -1,7 +1,5 @@
 # crszu
 
-[![Build Status](https://secure.travis-ci.org/marknv/crszu.png)](http://travis-ci.org/marknv/crszu)
-
 Capthca Regonization for SZU Authentication (https://auth.szu.edu.cn/cas.aspx).
 
 Recognition rate is above 80%.
