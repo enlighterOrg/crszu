@@ -4,7 +4,7 @@ setup(
       name="crszu",
       packages=["crszu"],
       version="0.0.1",
-      install_requires=["PIL"],
+      install_requires=["pillow"],
       description="captcha regonization for SZU authentication.",
       author="MarkNV",
       author_email="marknv@live.com",
