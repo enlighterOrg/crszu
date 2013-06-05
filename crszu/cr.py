@@ -9,7 +9,7 @@ from edge_detection import find_edges
 from match import match
 import os
 
-_CROPS = "images/crops/"
+_CROPS = "crszu/images/crops/"
 
 def cleanup():
     """
@@ -59,5 +59,5 @@ def captcha_regonize(im):
     return captcha
 
 if __name__ == "__main__":
-    image = "images/captcha/gencheckcode1.png"
+    image = "crszu/images/captcha/gencheckcode.png"
     print captcha_regonize(image)

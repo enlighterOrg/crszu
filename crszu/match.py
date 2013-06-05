@@ -4,12 +4,14 @@
 import os
 import Image, ImageOps
 
+_MODELS = "crszu/images/models/"
+
 def match(im):
     """
     Match single char image with all models, return matched value of char image.
     """
     diffs = []
-    for model in os.listdir("images/models"):
+    for model in os.listdir(_MODELS):
         diffs.append(match_file(im, model))
     diffs.sort()
     return diffs[0][1][0]
@@ -20,7 +22,7 @@ def match_file(im, model_name):
     """
     diff = 0
     im = Image.open(im)
-    model = Image.open("images/models/"+ model_name)
+    model = Image.open(_MODELS + model_name)
     img = im.resize((15,20))
     model = model.resize((15,20))
     width, height = model.size
