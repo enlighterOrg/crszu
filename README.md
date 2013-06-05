@@ -1,4 +1,6 @@
-# Capthca Regonization for SZU Authentication
+# crszu
+
+Capthca Regonization for SZU Authentication
 
 ## How to use?
 
@@ -7,7 +9,7 @@ from crszu import cr
 
 img = "crszu/images/captcha/gencheckcode.png"
 captcha = cr.captcha_regonize(img)
-print capthca
+print captcha
 
 #ggs6
 ```
