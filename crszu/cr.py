@@ -49,7 +49,7 @@ def matchcapthca():
 
 def captcha_regonize(im):
     """
-    Run captcha regonization
+    Run captcha regonization.
     """
     cleanup()
     img = rmnoise(preprocess(im))
@@ -59,5 +59,5 @@ def captcha_regonize(im):
     return captcha
 
 if __name__ == "__main__":
-    image = "images/captcha/gencheckcode.png"
+    image = "images/captcha/gencheckcode1.png"
     print captcha_regonize(image)
