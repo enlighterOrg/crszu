@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 #-*- coding:utf-8 -*-
 
-import Image
+from PIL import Image
 from errors import InvalidSizeError,SizeTypeError
 
 def rmnoise(im, size=5, min_nbs=2):

@@ -2,7 +2,7 @@
 #-*- coding:utf-8 -*-
 
 import os
-import Image, ImageOps
+from PIL import Image, ImageOps
 
 _MODELS = "crszu/images/models/"
 

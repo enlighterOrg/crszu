@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 #-*- coding:utf-8 -*-
 
-import Image
+from PIL import Image
 
 def find_edges(im):
     """
