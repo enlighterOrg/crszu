@@ -1,12 +1,14 @@
-from distutils.core import setup
+from setuptools import setup
 
 setup(
       name="crszu",
       packages=["crszu"],
-      version="1.0.0",
+      version="0.0.1",
       install_requires=["PIL"],
       description="captcha regonization for SZU authentication.",
       author="MarkNV",
       author_email="marknv@live.com",
-      url="https://github.com/marknv/crszu"
+      url="https://github.com/marknv/crszu",
+      test_suite="nose.collector",
+      tests_require=["nose"]
 )

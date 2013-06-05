@@ -1,3 +1,4 @@
 *.pyc
 *.swp
 /venv/
+/crszu.egg-info/
