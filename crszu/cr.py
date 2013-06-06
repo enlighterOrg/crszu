@@ -9,7 +9,7 @@ from edge_detection import find_edges
 from match import match
 import os
 
-_CROPS = "crszu/images/crops/"
+_CROPS = os.getcwd() + "/crszu/images/crops/"
 
 def cleanup():
     """

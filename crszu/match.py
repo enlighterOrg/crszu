@@ -4,7 +4,7 @@
 import os
 from PIL import Image, ImageOps
 
-_MODELS = "crszu/images/models/"
+_MODELS = os.getcwd() + "/crszu/images/models/"
 
 def match(im):
     """
