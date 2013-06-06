@@ -1,2 +1,1 @@
 recursive-include crszu/images *
-prune crszu/images/crops/*.png
