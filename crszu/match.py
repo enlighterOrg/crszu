@@ -4,7 +4,9 @@
 import os
 from PIL import Image, ImageOps
 
-_MODELS = os.getcwd() + "/crszu/images/models/"
+_DIR = os.path.dirname(os.path.abspath(__file__))
+_MODELS_SUFFIX = "images/models/"
+_MODELS = os.path.join(_DIR,_MODELS_SUFFIX)
 
 def match(im):
     """

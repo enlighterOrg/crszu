@@ -1,12 +1,15 @@
 #!/usr/bin/env python
 #-*- coding:utf-8 -*-
 
+import os
+
 import nose.tools
 
 from crszu import rmnoise,cr
 from crszu.errors import InvalidSizeError, SizeTypeError
 
-img = cr.preprocess("tests/images/captcha/gencheckcode.png")
+_DIR = os.path.dirname(os.path.abspath(__file__))
+img = cr.preprocess(_DIR + "/images/captcha/gencheckcode.png")
 
 @nose.tools.raises(InvalidSizeError)
 def test_invalid_size_error():

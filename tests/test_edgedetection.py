@@ -1,10 +1,13 @@
 #!/usr/bin/env python
 #-*- coding:utf-8 -*-
 
+import os
+
 from crszu import cr
 from crszu.edge_detection import find_edges
 
-img = cr.rmnoise(cr.preprocess("tests/images/captcha/gencheckcode.png"))
+_DIR = os.path.dirname(os.path.abspath(__file__))
+img = cr.rmnoise(cr.preprocess(_DIR + "/images/captcha/gencheckcode.png"))
 
 def test_find_edges():
     """Test find edges method"""

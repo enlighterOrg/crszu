@@ -1,10 +1,13 @@
 #!/usr/bin/env python
 # -*- encoding:utf-8 -*-
 
+import os
+
 from crszu import cr
 from crszu.rmnoise import count_neighbors
 
-img = cr.preprocess("tests/images/captcha/gencheckcode.png")
+_DIR = os.path.dirname(os.path.abspath(__file__))
+img = cr.preprocess(_DIR + "/images/captcha/gencheckcode.png")
 w,h = img.size
 data = img.load()
 
