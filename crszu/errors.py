@@ -1,14 +1,16 @@
 #!/usr/bin/env python
 #-*- coding:utf-8 -*-
 
+
 class InvalidSizeError(ValueError):
     """Invalid Size Error.
-    
+
     The exception will be raised while filter size is not applicable.
     """
     def __init__(self, size, message=" is not an valid filter size"):
         message = str(size) + message
         super(InvalidSizeError, self).__init__(message)
+
 
 class SizeTypeError(TypeError):
     """Size Type Error Error.
