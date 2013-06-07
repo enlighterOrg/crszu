@@ -2,3 +2,4 @@
 *.swp
 /venv/
 /crszu.egg-info/
+/dist/
