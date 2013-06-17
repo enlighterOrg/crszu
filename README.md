@@ -4,7 +4,7 @@
 
 Capthca Regonization for SZU Authentication (https://auth.szu.edu.cn/cas.aspx).
 
-Recognition rate is above 80%.
+Recognition rate is above 80%. Simple, easy and fast!
 
 ## How to use?
 
