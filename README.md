@@ -13,6 +13,7 @@ from crszu import cr
 
 img = "crszu/images/captcha/gencheckcode.png"
 captcha = cr.captcha_regonize(img)
+
 print captcha
 
 #8jh9
